@@ -1,45 +1,47 @@
-import React, { Component } from "react"
+import React, { Component } from "react";
 // import addToMailchimp from "gatsby-plugin-mailchimp"
 
 class Newsletter extends Component {
   constructor(props) {
-    super(props)
+    super(props);
     this.state = {
       showSuccess: false,
       showError: false,
       successMsg: "",
-      errorMsg: "",
-    }
+      errorMsg: ""
+    };
   }
   sleep = delay => {
-    var start = new Date().getTime()
+    var start = new Date().getTime();
     while (new Date().getTime() < start + delay);
-  }
+  };
   onSubmit = async event => {
-    event.preventDefault()
-    const email = event.target.yourmail.value || null
-    console.log(email)
+    event.preventDefault();
+    const email = event.target.yourmail.value || null;
+    console.log(email);
     if (!email) {
-      return
+      return;
     }
 
     try {
       //   const result = await addToMailchimp(email, {})
       //   console.log(result.msg)
       //   console.log(email)
-      this.setState({ showSuccess: true })
+      this.setState({ showSuccess: true });
       //   this.setState({ successMsg: result.msg })
-      this.setState({ successMsg: email })
-      this.setState({ showError: false })
-      this.setState({ errorMsg: "" })
+      this.setState({ successMsg: "You've been subscribed" });
+      this.setState({ showError: false });
+      this.setState({
+        errorMsg: "There was an error. Please try again later."
+      });
     } catch (err) {
-      console.log(err)
-      this.setState({ showSuccess: false })
-      this.setState({ successMsg: "" })
-      this.setState({ showError: true })
-      this.setState({ errorMsg: err })
+      console.log(err);
+      this.setState({ showSuccess: false });
+      this.setState({ successMsg: "" });
+      this.setState({ showError: true });
+      this.setState({ errorMsg: err });
     }
-  }
+  };
   render() {
     return (
       <>
@@ -78,8 +80,8 @@ class Newsletter extends Component {
           dangerouslySetInnerHTML={{ __html: this.state.errorMsg }}
         />
       </>
-    )
+    );
   }
 }
 
-export default Newsletter
+export default Newsletter;

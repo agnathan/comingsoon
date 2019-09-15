@@ -1,15 +1,15 @@
-import React from "react"
-import { Link } from "gatsby"
+import React from "react";
+import { Link } from "gatsby";
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import Layout from "../components/layout";
+import Image from "../components/image";
+import SEO from "../components/seo";
 
-import { FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa"
+import { FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
 
-import Newsletter from "../components/newsletter"
+import Newsletter from "../components/newsletter";
 
-const bgVideo = require("../dist/mp4/bg.mp4")
+const bgVideo = require("../dist/mp4/bg.mp4");
 
 const IndexPage = () => (
   <Layout>
@@ -35,7 +35,7 @@ const IndexPage = () => (
               <p class="mb-5">
                 We're working hard to finish the development of this site. Our
                 target launch date is
-                <strong>January 2019</strong>! Sign up for updates using the
+                <strong> January 2019</strong>! Sign up for updates using the
                 form below!
               </p>
 
@@ -66,6 +66,6 @@ const IndexPage = () => (
       </ul>
     </div>
   </Layout>
-)
+);
 
-export default IndexPage
+export default IndexPage;
