@@ -1,6 +1,7 @@
 import React, { Component } from "react";
-// import addToMailchimp from "gatsby-plugin-mailchimp"
+import addToMailchimp from "gatsby-plugin-mailchimp";
 
+// https://aaloncapital.us7.list-manage.com/subscribe/post?u=f9e3a747690df5d7b02fc1a05&amp;id=9a5bce46ff
 class Newsletter extends Component {
   constructor(props) {
     super(props);
@@ -24,7 +25,7 @@ class Newsletter extends Component {
     }
 
     try {
-      //   const result = await addToMailchimp(email, {})
+      const result = await addToMailchimp(email, {});
       //   console.log(result.msg)
       //   console.log(email)
       this.setState({ showSuccess: true });
