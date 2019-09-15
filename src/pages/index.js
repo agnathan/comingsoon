@@ -10,20 +10,23 @@ import { FaTwitter, FaFacebookF, FaInstagram } from "react-icons/fa";
 import Newsletter from "../components/newsletter";
 
 const bgVideo = require("../dist/mp4/bg.mp4");
-
+const bgImage = require("../dist/img/win-background.jpg");
 const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
 
-    <div class="overlay"></div>
-    <video
+    <div
+      class="overlay"
+      style={{ backgroundImage: "url(" + bgImage + ")" }}
+    ></div>
+    {/* <video
       playsinline="playsinline"
       autoplay="autoplay"
       muted="muted"
       loop="loop"
     >
       <source src={bgVideo} type="video/mp4" />
-    </video>
+    </video> */}
 
     <div class="masthead">
       <div class="masthead-bg"></div>
@@ -32,10 +35,11 @@ const IndexPage = () => (
           <div class="col-12 my-auto">
             <div class="masthead-content text-white py-5 py-md-0">
               <h1 class="mb-3">Coming Soon!</h1>
+              <h2>Willamette Investors Network</h2>
               <p class="mb-5">
                 We're working hard to finish the development of this site. Our
                 target launch date is
-                <strong> January 2019</strong>! Sign up for updates using the
+                <strong> October 2019</strong>! Sign up for updates using the
                 form below!
               </p>
 
@@ -48,18 +52,18 @@ const IndexPage = () => (
 
     <div class="social-icons">
       <ul class="list-unstyled text-center mb-0">
-        <li class="list-unstyled-item">
+        {/* <li class="list-unstyled-item">
           <a href="#">
             <FaTwitter />
           </a>
-        </li>
+        </li> */}
         <li class="list-unstyled-item">
-          <a href="#">
+          <a href="https://www.facebook.com/Willamette-Investor-Network-108007533874139/">
             <FaFacebookF />
           </a>
         </li>
         <li class="list-unstyled-item">
-          <a href="#">
+          <a href="https://www.instagram.com/willametteinvestornetwork/">
             <FaInstagram />
           </a>
         </li>
